@@ -8,7 +8,8 @@ public class EnemyPop : MonoBehaviour
     [Header("Catsle Settings")]
     [SerializeField] float HP;
     [Header("Enemy Set")]
-    [SerializeField] private GameObject[] Enemy = null;
+    [SerializeField] private int EnemyNum;
+    [SerializeField] private GameObject[] Enemy;
     [SerializeField] private float[] Frequency;
 
     private float time;
@@ -21,14 +22,14 @@ public class EnemyPop : MonoBehaviour
         time += Time.deltaTime;
 
         GenerateMonster();
-        if (HP == 0) {
+        if (HP <= 0) {
             GameClear();
         }
     }
 
     private void GenerateMonster()
     {
-        for (int i = 0; Enemy[i] != null; i++)
+        for (int i = 0; i < EnemyNum; i++)
             if (Mathf.Approximately(time % Frequency[i], 0.0f))
             {
                 Instantiate(Enemy[i], PopPos.position,Quaternion.identity);
