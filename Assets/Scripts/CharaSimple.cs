@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharaController : MonoBehaviour
+public class CharaSimple : MonoBehaviour
 {
     [Header("Enemy or Friend")]
     public bool isFriend;
@@ -30,7 +30,7 @@ public class CharaController : MonoBehaviour
     private RaycastHit Hit;
 
     // damage
-    CharaController chara;
+    Bullet E_bullet;
 
     void FixedUpdate()
     {
@@ -57,8 +57,8 @@ public class CharaController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("bullet"))
         {
-            chara = other.GetComponent<CharaController>();
-            HP -= chara.power;
+            E_bullet = other.GetComponent<Bullet>();
+            HP -= E_bullet.power;
         }
     }
 
