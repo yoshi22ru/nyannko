@@ -2,36 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class AreaBullet : MonoBehaviour
 {
     CharaSimple charaController;
-    private int speed = 10;
-    private float second;
+    Transform parent;
+    private float second = 0.1f;
     private float time;
     public int power;
     public float attackRange;
     void Start()
     {
         charaController = GetComponentInParent<CharaSimple>();
+        parent = GetComponentInParent<Transform>();
+
         if (charaController != null) {
             power = charaController.power;
             attackRange = charaController.attackRange;
+            if (!charaController.isFriend)
+                attackRange = -attackRange;
         }
         else {
             power = 0;
             attackRange = 0;
         }
-
-        second = attackRange / speed;
-        if (!charaController.isFriend)
-            speed = -speed;
+        this.transform.position = new Vector3(parent.position.x + attackRange, parent.position.y, parent.position.z);
     }
 
     void FixedUpdate()
     {
         time += Time.deltaTime;
-
-        this.transform.Translate(speed * Time.deltaTime, 0.0f, 0.0f);
         if (time >= second) {
             Destroy(this.gameObject);
         }
@@ -42,7 +41,6 @@ public class Bullet : MonoBehaviour
         {
             charaController = other.GetComponent<CharaSimple>();
             charaController.HP -= power;
-            Destroy(this.gameObject);
         }
     }
 }
