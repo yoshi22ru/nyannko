@@ -26,6 +26,8 @@ public class Slot : MonoBehaviour,IBeginDragHandler,IDragHandler,IDropHandler,IE
         canvasTransform = FindObjectOfType<Canvas>().transform;
 
         hand = FindObjectOfType<Hand>();
+
+        if (MyItem == null) itemImage.color = new Color(0, 0, 0, 0);
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
