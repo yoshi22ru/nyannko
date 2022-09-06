@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 public class Slot : MonoBehaviour,IBeginDragHandler,IDragHandler,IDropHandler,IEndDragHandler
 {
     private Item item;
+    [SerializeField] private InfomationCounter info = null;
+    [SerializeField] private int raidNum = -1;
 
     [SerializeField]
     private Image itemImage;
@@ -32,16 +34,16 @@ public class Slot : MonoBehaviour,IBeginDragHandler,IDragHandler,IDropHandler,IE
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (MyItem == null) return;
-        //ƒAƒCƒeƒ€‚ÌƒCƒ[ƒW‚ğ•¡»
+        //ï¿½Aï¿½Cï¿½eï¿½ï¿½ï¿½ÌƒCï¿½ï¿½ï¿½[ï¿½Wï¿½ğ•¡ï¿½
         draggingObj = Instantiate(itemImageObj, canvasTransform);
 
-        //•¡»‚ğÅ‘O–Ê‚É”z’u
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‘Oï¿½Ê‚É”zï¿½u
         draggingObj.transform.SetAsLastSibling();
 
-        //•¡»Œ³‚ÌƒAƒCƒeƒ€‚ğˆÃ‚­‚·‚é
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌƒAï¿½Cï¿½eï¿½ï¿½ï¿½ï¿½ï¿½Ã‚ï¿½ï¿½ï¿½ï¿½ï¿½
         itemImage.color = Color.gray;
 
-        //’‡‰îl‚ÉƒAƒCƒeƒ€‚ğ“n‚·
+        //ï¿½ï¿½ï¿½ï¿½lï¿½ÉƒAï¿½Cï¿½eï¿½ï¿½ï¿½ï¿½nï¿½ï¿½
         hand.SetGrabbingItem(MyItem);
     }
 
@@ -49,7 +51,7 @@ public class Slot : MonoBehaviour,IBeginDragHandler,IDragHandler,IDropHandler,IE
     {
         if (MyItem == null) return;
 
-        //•¡»‚ªƒ|ƒCƒ“ƒ^[‚ğ’Ç]‚·‚é‚æ‚¤‚É‚·‚é
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½|ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½ï¿½Ç]ï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½É‚ï¿½ï¿½ï¿½
         draggingObj.transform.position = hand.transform.position + new Vector3(20,20,0);
     }
 
@@ -63,6 +65,8 @@ public class Slot : MonoBehaviour,IBeginDragHandler,IDragHandler,IDropHandler,IE
 
             itemImage.sprite = item.MyItemImage;
 
+            if (info != null)
+                info.LeadRaid(raidNum, item);
         }
         else
         {
@@ -72,12 +76,12 @@ public class Slot : MonoBehaviour,IBeginDragHandler,IDragHandler,IDropHandler,IE
 
     public void OnDrop(PointerEventData eventData)
     {
-        //’‡‰îl‚ªƒAƒCƒeƒ€‚ğ‚Á‚Ä‚¢‚È‚©‚Á‚½‚ç‘Šúreturn
+        //ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Aï¿½Cï¿½eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç‘ï¿½ï¿½return
         if (!hand.IsHavingItem()) return;
-        //’‡‰îl‚©‚çƒAƒCƒeƒ€‚ğó‚¯æ‚é
+        //ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½Aï¿½Cï¿½eï¿½ï¿½ï¿½ï¿½ï¿½ó‚¯ï¿½ï¿½
         Item gotItem = hand.GetGrabbingItem();
 
-        //‚à‚Æ‚à‚Æ‚Á‚Ä‚¢‚½ƒAƒCƒeƒ€‚ğ’‡‰îl‚É“n‚·
+        //ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Æï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Aï¿½Cï¿½eï¿½ï¿½ï¿½ğ’‡‰ï¿½lï¿½É“nï¿½ï¿½
         hand.SetGrabbingItem(MyItem);
 
         Setitem(gotItem);
@@ -88,7 +92,7 @@ public class Slot : MonoBehaviour,IBeginDragHandler,IDragHandler,IDropHandler,IE
         Destroy(draggingObj);
 
 
-        //’‡‰îl‚©‚çƒAƒCƒeƒ€‚ğó‚¯æ‚é
+        //ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½Aï¿½Cï¿½eï¿½ï¿½ï¿½ï¿½ï¿½ó‚¯ï¿½ï¿½
         Item gotItem = hand.GetGrabbingItem();
         Setitem(gotItem);
     }
