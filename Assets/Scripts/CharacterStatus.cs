@@ -1,16 +1,14 @@
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "Items",menuName = "Items/item")]
-public abstract class Item : ScriptableObject
+[Serializable]
+public abstract class CharacterStatus : ScriptableObject
 {
-    //キャラクター名
-    [SerializeField]
-    private string itemName;
-    //キャラクター画像
-    [SerializeField]
-    private Sprite itemImage;
     //　キャラクターのレベル
     [SerializeField]
     private int level = 1;
@@ -29,10 +27,6 @@ public abstract class Item : ScriptableObject
     //　打たれ強さ
     [SerializeField]
     private int strikingStrength = 10;
-
-    public string MyItemName { get => itemName; }
-    public Sprite MyItemImage { get => itemImage; }
-
 
 
     public void SetLevel(int level)
@@ -94,5 +88,4 @@ public abstract class Item : ScriptableObject
     {
         return strikingStrength;
     }
-
 }
