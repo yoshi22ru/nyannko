@@ -5,23 +5,30 @@ using UnityEngine;
 public class InfomationCounter : MonoBehaviour
 {
     // Item counter
-    public Item[] Raid = null;
-    [SerializeField] private int raidMax;
+    public List<Item> Raid = new List<Item>();
 
     void Start()
     {
         DontDestroyOnLoad(this);
     }
 
-    public void LeadRaid(int Num, Item chara)
+    public void LeadRaid(Item chara)
     {
-        if (Num < 0) return;
+        Raid.Add(chara);
 
-        Raid[Num] = chara;
-
-        for (int i = 0; i < raidMax; i++) {
+        for (int i = 0; i < Raid.Count; i++) {
             if (Raid[i] != null)
-                Debug.Log(Raid[i].MyItemName);
+                Debug.Log(i + "番目" +Raid[i].MyItemName);
+        }
+    }
+
+    public void RemoveRaid(Item chara)
+    {
+        Raid.Remove(chara);
+
+        for (int i = 0; i < Raid.Count; i++) {
+            if (Raid[i] != null)
+                Debug.Log(i + "番目" +Raid[i].MyItemName);
         }
     }
 }

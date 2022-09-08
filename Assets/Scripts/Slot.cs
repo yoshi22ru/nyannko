@@ -8,7 +8,6 @@ public class Slot : MonoBehaviour,IBeginDragHandler,IDragHandler,IDropHandler,IE
 {
     private Item item;
     [SerializeField] private InfomationCounter info = null;
-    [SerializeField] private int raidNum = -1;
 
     [SerializeField]
     private Image itemImage;
@@ -43,6 +42,10 @@ public class Slot : MonoBehaviour,IBeginDragHandler,IDragHandler,IDropHandler,IE
         //�������̃A�C�e�����Â�����
         itemImage.color = Color.gray;
 
+        // remove chara from list
+        if (info != null)
+            info.RemoveRaid(MyItem);
+
         //����l�ɃA�C�e����n��
         hand.SetGrabbingItem(MyItem);
     }
@@ -66,7 +69,7 @@ public class Slot : MonoBehaviour,IBeginDragHandler,IDragHandler,IDropHandler,IE
             itemImage.sprite = item.MyItemImage;
 
             if (info != null)
-                info.LeadRaid(raidNum, item);
+                info.LeadRaid(item);
         }
         else
         {
