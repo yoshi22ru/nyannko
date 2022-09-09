@@ -25,10 +25,5 @@ public class InfomationCounter : MonoBehaviour
     public void RemoveRaid(Item chara)
     {
         Raid.Remove(chara);
-
-        for (int i = 0; i < Raid.Count; i++) {
-            if (Raid[i] != null)
-                Debug.Log(i + "番目" +Raid[i].MyItemName);
-        }
     }
 }
