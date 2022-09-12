@@ -47,3 +47,9 @@ TagManager:
   - name: Button
     uniqueID: 1754438291
     locked: 0
+  - name: chara
+    uniqueID: 3304623653
+    locked: 0
+  - name: background
+    uniqueID: 2938349655
+    locked: 0
