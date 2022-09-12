@@ -22,7 +22,7 @@ public class titleManager : MonoBehaviour
 
     private void StartGame()
     {
-        SceneManager.LoadScene("MainMenue");
+        SceneManager.LoadScene("menu");
     }
     private void OpenSetting()
     {
