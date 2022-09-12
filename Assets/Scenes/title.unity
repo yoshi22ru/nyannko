@@ -2333,6 +2333,9 @@ MonoBehaviour:
   Startgame: {fileID: 1757456846}
   Setting: {fileID: 702969150}
   Close: {fileID: 1087680586}
+  iroiro:
+  - {fileID: 513047400}
+  - {fileID: 702969150}
   SettingPanel: {fileID: 380245688}
 --- !u!4 &1765845865
 Transform:
