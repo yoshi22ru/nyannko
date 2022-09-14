@@ -68,8 +68,8 @@ public class Slot : MonoBehaviour,IBeginDragHandler,IDragHandler,IDropHandler,IE
 
             itemImage.sprite = item.MyItemImage;
 
-            if (info != null)
-                info.LeadRaid(item);
+            //if (info != null)
+                //info.RaidInTo(item);
         }
         else
         {

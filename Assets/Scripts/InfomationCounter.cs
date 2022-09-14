@@ -12,7 +12,7 @@ public class InfomationCounter : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    public void LeadRaid(Item chara)
+    public void IntoRaid(Item chara)
     {
         Raid.Add(chara);
 
@@ -20,10 +20,20 @@ public class InfomationCounter : MonoBehaviour
             if (Raid[i] != null)
                 Debug.Log(i + "番目" +Raid[i].MyItemName);
         }
+        if (Raid.Count == 0) {
+            Debug.Log("no one in party");
+        }
     }
 
     public void RemoveRaid(Item chara)
     {
         Raid.Remove(chara);
+        for (int i = 0; i < Raid.Count; i++) {
+            if (Raid[i] != null)
+                Debug.Log(i + "番目" +Raid[i].MyItemName);
+        }
+        if (Raid.Count == 0) {
+            Debug.Log("no one in party");
+        }
     }
 }
