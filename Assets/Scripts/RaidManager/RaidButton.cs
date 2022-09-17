@@ -19,6 +19,7 @@ public class RaidButton : MonoBehaviour
             charaimage.color = new Color(0, 0, 0, 0);
         }
         else {
+            charaimage.color = new Color(225, 225, 225, 225);
             charaimage.sprite = raidMenu.charaDataBase.charadata[myNumber].MyItemImage;
         }
     }
