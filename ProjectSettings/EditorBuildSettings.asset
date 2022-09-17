@@ -5,10 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/menu.unity
     guid: 3884aad2fc32cdd42851ded5de60a692
+  - enabled: 1
+    path: Assets/Scenes/title.unity
+    guid: 8da718b649d6b874f97a2d24b7a74e85
+  - enabled: 1
+    path: Assets/Scenes/Hensei.unity
+    guid: 33419a159240e1d40a6bd905d22464f3
+  - enabled: 1
+    path: Assets/Scenes/SelectBattle.unity
+    guid: 681afe3b1ccc85b4e8c12119b56e158a
   m_configObjects: {}
