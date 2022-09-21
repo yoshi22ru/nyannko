@@ -6,6 +6,7 @@ public class InfomationCounter : MonoBehaviour
 {
     // Item counter
     public List<Item> Raid = new List<Item>();
+    public int partyMAX = 4;
 
     void Start()
     {
