@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    public static Enemy instance;
+    public static Enemy Instance;
 
-    AudioSource audioSource;
+   
 
     private Animator anim = null;
 
@@ -15,22 +15,22 @@ public class Enemy : MonoBehaviour
 
     public void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
     }
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (ìGÇÃHPä«óù.instance.isDead)
+        if (ìGÇÃHPä«óù.Instance.isDead)
             anim.Play("Dead");
     }
 
