@@ -39,10 +39,9 @@ public class　敵のHP管理 : MonoBehaviour
     }
 
     // Update is called once per frame
-    //void OnCollisionEnter(Collision collision)
-    void Update()
+    void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log(collision.gameObject.name + "と接触した");
+        Debug.Log(collision.gameObject.name + "と接触した");
         Text 敵のhp_text = 敵のhp_object.GetComponent<Text>();
         Text hp_text = 味方のhp_object.GetComponent<Text>();
 
