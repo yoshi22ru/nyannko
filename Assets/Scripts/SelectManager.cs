@@ -9,13 +9,13 @@ public class SelectManager : MonoBehaviour
     {
         switch (StageNum) {
         case 1:
-            SceneManager.LoadScene("Batte1");
+            SceneManager.LoadScene("Battle1");
             break;
         case 2:
-            SceneManager.LoadScene("Batte2");
+            SceneManager.LoadScene("Battle2");
             break;
         case 3:
-            SceneManager.LoadScene("Batte3");
+            SceneManager.LoadScene("Battle3");
             break;
         }
     }
