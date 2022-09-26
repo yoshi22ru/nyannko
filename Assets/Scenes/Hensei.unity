@@ -1694,8 +1694,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc48cdce483698a48983016fe075bf10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charaDataBase: {fileID: 0}
-  infomationCounter: {fileID: 0}
+  charaDataBase: {fileID: 11400000, guid: e3c934bfc76365b44a45be6054148cbf, type: 2}
+  infomationCounter: {fileID: 1764543028}
 --- !u!224 &2025891442 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3483640297359808417, guid: d0350a64762f00846a13acdf37ceae55, type: 3}
@@ -1831,7 +1831,7 @@ PrefabInstance:
     - target: {fileID: 8418219498408817251, guid: d0350a64762f00846a13acdf37ceae55, type: 3}
       propertyPath: raidMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1764543032}
     - target: {fileID: 8418219498408817251, guid: d0350a64762f00846a13acdf37ceae55, type: 3}
       propertyPath: slotPrefab
       value: 
