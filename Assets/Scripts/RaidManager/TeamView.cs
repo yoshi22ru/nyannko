@@ -14,12 +14,15 @@ public class TeamView : MonoBehaviour
     }
     void Update()
     {
-        for (int i = 0; i < info.partyMAX; i++) {
-            if (info.Raid[i] != null) {
-                raid[i].sprite = info.Raid[i].MyItemImage;
-            }
-            else {
+        int i;
+        for (i = 0; i < info.Raid.Count; i++) {
+            raid[i].sprite = info.Raid[i].MyItemImage;
+            raid[i].color = Color.white;
+        }
+        if (i < info.partyMAX) {
+            for (;i < info.partyMAX; i++) {
                 raid[i].sprite = null;
+                raid[i].color = Color.clear;
             }
         }
     }
