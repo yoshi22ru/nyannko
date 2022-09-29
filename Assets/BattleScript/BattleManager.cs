@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BattleManager : MonoBehaviour
 {
     [SerializeField] private Button stop;
-    [SerializeField] private Button LevelUp;
+    //[SerializeField] private Button LevelUp;
     [SerializeField] private Text Money;
     [SerializeField] private int[] levelUpMoney;
     int nowLevel;
@@ -16,8 +16,9 @@ public class BattleManager : MonoBehaviour
 
     void Start()
     {
+        nowLevel = 0;
         stop.onClick.AddListener(Stop);
-        LevelUp.onClick.AddListener(levelUp);
+//        LevelUp.onClick.AddListener(levelUp);
     }
 
     void FixedUpdate()

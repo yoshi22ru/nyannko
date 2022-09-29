@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8267865368552174980}
   - component: {fileID: 6106332080078729134}
   - component: {fileID: 671879150702971004}
+  - component: {fileID: 2206263175613824575}
   m_Layer: 5
   m_Name: player1
   m_TagString: Untagged
@@ -123,6 +124,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2206263175613824575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3724492797463662701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2a13b10eaccc54ea8bff1bf36de578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyNumber: 0
+  SlotSprite: {fileID: 7694283609397326747}
+  SlotText: {fileID: 7164994663794163597}
+  PopPos: {fileID: 0}
 --- !u!1 &4169202993394901954
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,3 +340,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5421229976679419862, guid: 26ddc025f7dd1134da02f2e350a22c33, type: 3}
   m_PrefabInstance: {fileID: 6350549314337206473}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7694283609397326747 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3667681452584567634, guid: 26ddc025f7dd1134da02f2e350a22c33, type: 3}
+  m_PrefabInstance: {fileID: 6350549314337206473}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

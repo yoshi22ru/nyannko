@@ -14,10 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Magic
   itemImage: {fileID: 6492391481879774325, guid: 3765a367fb48f9040bca18add088d6d3, type: 3}
-  level: 1
-  maxHp: 100
-  hp: 100
-  agility: 5
-  power: 10
-  strikingStrength: 10
+  Chara: {fileID: 8165155841467314063, guid: 6d728c22ad084e542a7bb9940db88a4f, type: 3}
   earnedExperience: 0

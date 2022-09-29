@@ -5,94 +5,98 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Items",menuName = "Items/item")]
 public abstract class Item : ScriptableObject
 {
-    //ƒLƒƒƒ‰ƒNƒ^[–¼
+    //ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½^ï¿½[ï¿½ï¿½
     [SerializeField]
     private string itemName;
-    //ƒLƒƒƒ‰ƒNƒ^[‰æ‘œ
+    //ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½^ï¿½[ï¿½æ‘œ
     [SerializeField]
     private Sprite itemImage;
-    //@ƒLƒƒƒ‰ƒNƒ^[‚ÌƒŒƒxƒ‹
-    [SerializeField]
-    private int level = 1;
-    //@Å‘åHP
-    [SerializeField]
-    private int maxHp = 100;
-    //@HP
-    [SerializeField]
-    private int hp = 100;
-    //@‘f‘‚³
-    [SerializeField]
-    private int agility = 5;
-    //@—Í
-    [SerializeField]
-    private int power = 10;
-    //@‘Å‚½‚ê‹­‚³
-    [SerializeField]
-    private int strikingStrength = 10;
+
+    [SerializeField] private GameObject Chara;
+
+    // //ï¿½@ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½^ï¿½[ï¿½Ìƒï¿½ï¿½xï¿½ï¿½
+    // [SerializeField]
+    // private int level = 1;
+    // //ï¿½@ï¿½Å‘ï¿½HP
+    // [SerializeField]
+    // private int maxHp = 100;
+    // //ï¿½@HP
+    // [SerializeField]
+    // private int hp = 100;
+    // //ï¿½@ï¿½fï¿½ï¿½ï¿½ï¿½
+    // [SerializeField]
+    // private int agility = 5;
+    // //ï¿½@ï¿½ï¿½
+    // [SerializeField]
+    // private int power = 10;
+    // //ï¿½@ï¿½Å‚ï¿½ï¿½ê‹­ï¿½ï¿½
+    // [SerializeField]
+    // private int strikingStrength = 10;
 
     public string MyItemName { get => itemName; }
     public Sprite MyItemImage { get => itemImage; }
+    public GameObject BattleChara { get => Chara; }
 
 
 
-    public void SetLevel(int level)
-    {
-        this.level = level;
-    }
+    // public void SetLevel(int level)
+    // {
+    //     this.level = level;
+    // }
 
-    public int GetLevel()
-    {
-        return level;
-    }
+    // public int GetLevel()
+    // {
+    //     return level;
+    // }
 
-    public void SetMaxHp(int hp)
-    {
-        this.maxHp = hp;
-    }
+    // public void SetMaxHp(int hp)
+    // {
+    //     this.maxHp = hp;
+    // }
 
-    public int GetMaxHp()
-    {
-        return maxHp;
-    }
+    // public int GetMaxHp()
+    // {
+    //     return maxHp;
+    // }
 
-    public void SetHp(int hp)
-    {
-        this.hp = Mathf.Max(0, Mathf.Min(GetMaxHp(), hp));
-    }
+    // public void SetHp(int hp)
+    // {
+    //     this.hp = Mathf.Max(0, Mathf.Min(GetMaxHp(), hp));
+    // }
 
-    public int GetHp()
-    {
-        return hp;
-    }
+    // public int GetHp()
+    // {
+    //     return hp;
+    // }
 
-    public void SetAgility(int agility)
-    {
-        this.agility = agility;
-    }
+    // public void SetAgility(int agility)
+    // {
+    //     this.agility = agility;
+    // }
 
-    public int GetAgility()
-    {
-        return agility;
-    }
+    // public int GetAgility()
+    // {
+    //     return agility;
+    // }
 
-    public void SetPower(int power)
-    {
-        this.power = power;
-    }
+    // public void SetPower(int power)
+    // {
+    //     this.power = power;
+    // }
 
-    public int GetPower()
-    {
-        return power;
-    }
+    // public int GetPower()
+    // {
+    //     return power;
+    // }
 
-    public void SetStrikingStrength(int strikingStrength)
-    {
-        this.strikingStrength = strikingStrength;
-    }
+    // public void SetStrikingStrength(int strikingStrength)
+    // {
+    //     this.strikingStrength = strikingStrength;
+    // }
 
-    public int GetStrikingStrength()
-    {
-        return strikingStrength;
-    }
+    // public int GetStrikingStrength()
+    // {
+    //     return strikingStrength;
+    // }
 
 }

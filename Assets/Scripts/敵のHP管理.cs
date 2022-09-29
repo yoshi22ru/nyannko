@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class　敵のHP管理 : MonoBehaviour
+public class 敵のHP管理 : MonoBehaviour
 {
     public GameObject 敵のhp_object = null;
     public GameObject 味方のhp_object = null;
