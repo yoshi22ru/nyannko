@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
 
     void FixedUpdate()
     {
-        time += Time.deltaTime;
+        time += Time.fixedDeltaTime;
 
         this.transform.Translate(speed * Time.deltaTime, 0.0f, 0.0f);
         if (time >= second) {
@@ -43,6 +43,10 @@ public class Bullet : MonoBehaviour
             charaController = other.GetComponent<CharaSimple>();
             charaController.HP -= power;
             Destroy(this.gameObject);
+        }
+        if (other.gameObject.CompareTag("Catsle"))
+        {
+            
         }
     }
 }

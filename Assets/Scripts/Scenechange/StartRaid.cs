@@ -13,9 +13,6 @@ public class StartRaid : MonoBehaviour
     }
     void RaidStart()
     {
-        GameObject obj = GameObject.Find("info");
-        if (obj != null)
-            Destroy(obj);
         SceneManager.LoadScene("Hensei");
     }
 }

@@ -9,6 +9,7 @@ public class RaidButtonFather : MonoBehaviour
     private int slotNumber = 12;
     void Start()
     {
+        raidMenu = GameObject.Find("info").GetComponent<RaidMenu>();
         for(int i = 0; i < slotNumber; i++)
         {
             GameObject slotObj = Instantiate(slotPrefab, this.transform);

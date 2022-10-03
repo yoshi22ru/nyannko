@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class EnemyPop : MonoBehaviour
 {
-    [SerializeField] private Transform PopPos;
-    [Header("Catsle Settings")]
-    [SerializeField] float HP;
     [Header("Enemy Set")]
     [SerializeField] private int EnemyNum;
     [SerializeField] private GameObject[] Enemy;
@@ -17,27 +14,20 @@ public class EnemyPop : MonoBehaviour
     {
         time = 0;
     }
-    void Update()
+    void FixedUpdate()
     {
-        time += Time.deltaTime;
+        time += Time.fixedDeltaTime;
 
         GenerateMonster();
-        if (HP <= 0) {
-            GameClear();
-        }
     }
 
     private void GenerateMonster()
     {
-        for (int i = 0; i < EnemyNum; i++)
+        for (int i = 0; i < EnemyNum; i++) {
             if (Mathf.Approximately(time % Frequency[i], 0.0f))
             {
-                Instantiate(Enemy[i], PopPos.position,Quaternion.identity);
+                Instantiate(Enemy[i], this.transform.position,Quaternion.identity);
             }
-    }
-
-    private void GameClear()
-    {
-        
+        }
     }
 }
