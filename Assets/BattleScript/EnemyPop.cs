@@ -24,7 +24,7 @@ public class EnemyPop : MonoBehaviour
     private void GenerateMonster()
     {
         for (int i = 0; i < EnemyNum; i++) {
-            if (Mathf.Approximately(time % Frequency[i], 0.0f))
+            if (time % Frequency[i] <= Time.fixedDeltaTime)
             {
                 Instantiate(Enemy[i], this.transform.position,Quaternion.identity);
             }

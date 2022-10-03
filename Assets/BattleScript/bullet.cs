@@ -36,17 +36,4 @@ public class Bullet : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("bullet"))
-        {
-            charaController = other.GetComponent<CharaSimple>();
-            charaController.HP -= power;
-            Destroy(this.gameObject);
-        }
-        if (other.gameObject.CompareTag("Catsle"))
-        {
-            
-        }
-    }
 }
