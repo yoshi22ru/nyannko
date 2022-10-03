@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 921580579980549597}
   - component: {fileID: 8011574116052041547}
   - component: {fileID: 7660731880792555105}
-  m_Layer: 7
-  m_Name: Square
+  m_Layer: 6
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 8165155841467314063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 121.15, y: 35.269997, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -71,11 +71,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -990343643
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8113208, g: 0.3571852, b: 0.3571852, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,11 +100,11 @@ MonoBehaviour:
   isFriend: 1
   HP: 10
   power: 1
-  speed: 1
+  speed: 0.5
   attackRange: 1
   attackAnimationLength: 1
   damageTime: 2
   bullet: {fileID: 5257622526144443540, guid: 7249926476af5bb4eb64544ed8a8f648, type: 3}
   enemyForMe:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128

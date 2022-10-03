@@ -10,20 +10,24 @@ public class CharaPop : MonoBehaviour
     [SerializeField] private Image SlotSprite;
     [SerializeField] private Text SlotText;
     [SerializeField] private Transform PopPos;
-    private float interval;
+    public const float interval = 3f;
     private float interval_count;
     void Start()
     {
         info = GameObject.Find("info").GetComponent<InfomationCounter>();
         this.GetComponent<Button>().onClick.AddListener(Pop);
-        SlotSprite.sprite = info.Raid[MyNumber].MyItemImage;
-        SlotText.text = info.Raid[MyNumber].MyItemName;
+        if (MyNumber < info.Raid.Count) {
+            SlotSprite.sprite = info.Raid[MyNumber].MyItemImage;
+            SlotText.text = info.Raid[MyNumber].MyItemName;
+        }
     }
 
     private void Pop()
     {
-        if (interval <= interval_count)
-            Instantiate(info.Raid[MyNumber].BattleChara, PopPos);
+        if (interval <= interval_count) {
+            interval_count = 0;
+            Instantiate(info.Raid[MyNumber].BattleChara, PopPos.position, Quaternion.Euler(0f, 0f, 0f));
+        }
     }
     void FixedUpdate()
     {
