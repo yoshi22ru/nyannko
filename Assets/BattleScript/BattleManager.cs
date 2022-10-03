@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class BattleManager : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class BattleManager : MonoBehaviour
     //[SerializeField] private Button LevelUp;
     [SerializeField] private Text Money;
     [SerializeField] private int[] levelUpMoney;
+    [SerializeField] private GameObject Pause;
+    [SerializeField] private Button quit;
+    Button setting;
     int nowLevel;
     float money;
     int amount;
@@ -18,6 +23,7 @@ public class BattleManager : MonoBehaviour
     {
         nowLevel = 0;
         stop.onClick.AddListener(Stop);
+        quit.onClick.AddListener(Quit);
 //        LevelUp.onClick.AddListener(levelUp);
     }
 
@@ -31,11 +37,15 @@ public class BattleManager : MonoBehaviour
 
     private void Stop()
     {
-        if (Time.timeScale == 0.0f) {
+        if (Time.timeScale == 0.0f) 
+        {
             Time.timeScale = 1.0f;
+            Pause.SetActive(false);
         }
-        else {
+        else 
+        {
             Time.timeScale = 0.0f;
+            Pause.SetActive(true);
         }
     }
 
@@ -51,5 +61,11 @@ public class BattleManager : MonoBehaviour
     public void account(int value)
     {
         money -= value;
+    }
+
+    private void Quit()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("menu");
     }
 }
