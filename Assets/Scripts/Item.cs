@@ -12,6 +12,11 @@ public abstract class Item : ScriptableObject
     [SerializeField]
     private Sprite itemImage;
 
+    [SerializeField]
+    private GameObject Chara;
 
+    public string MyItemName { get => itemName; }
+    public Sprite MyItemImage { get => itemImage; }
+    public GameObject BattleChara { get =>Chara; }
 
 }
