@@ -21,11 +21,11 @@ public class CharaSimple : MonoBehaviour
 
     // variable to attack
     [SerializeField] private GameObject bullet;
-    private bool dam;
+    //private bool dam;
 
 
     public LayerMask enemyForMe;
-    private bool isAttacking;
+    private bool isAttacking = false;
     private bool castHit;
     private RaycastHit Hit;
 
@@ -37,6 +37,7 @@ public class CharaSimple : MonoBehaviour
         if (!isAttacking) {// if I`m not attacking
             checkRange();   // check enemy in attack range
             if (castHit) {// if enemy is in attack range
+                Debug.Log("Encounted");
                 attack();// start attack
             }
             else {// if there is no enemy in attack range
@@ -59,34 +60,39 @@ public class CharaSimple : MonoBehaviour
         {
             E_bullet = other.GetComponent<Bullet>();
             HP -= E_bullet.power;
+            if (HP <= 0) {
+                Destroy(this.gameObject);
+            }
         }
     }
 
     private void checkRange()
     {
-        if (isFriend)
-            castHit = Physics.Raycast(this.transform.position, transform.right, attackRange, enemyForMe);
-        else
-            castHit = Physics.Raycast(this.transform.position, -transform.right, attackRange, enemyForMe);
+        if (isFriend) {
+            castHit = Physics2D.BoxCast(this.transform.position, new Vector2(0.1f, 1f), 0f, transform.right, attackRange, enemyForMe);
+        }
+        else {
+            castHit = Physics2D.BoxCast(this.transform.position, new Vector2(0.1f, 1f), 0f, transform.right, attackRange, enemyForMe);
+        }
     }
 
     private void walk()
     {
-        if (isFriend) {
+        if (isFriend) { // Friend
             this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f));
             transform.Translate(transform.right * speed / 10f);
         }
-        else {
+        else { // Enemy
             this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 180.0f, 0.0f));
-            transform.Translate(transform.right * speed / 10f);
+            transform.Translate(-transform.right * speed / 10f);
         }
     }
 
     private void attack()
     {
-        anim.SetBool("isAttack", true);
+        //anim.SetBool("isAttack", true);
         isAttacking = true;
-        dam = true;
+        //dam = true;
     }
     
     private void endAttack()
@@ -100,9 +106,8 @@ public class CharaSimple : MonoBehaviour
 
     private void damage()
     {
-        if (damageTime <= animetime && dam) {
+        if (damageTime <= animetime) {
             Instantiate(bullet, this.transform.position, Quaternion.Euler(0.0f, 0.0f, 0.0f), this.transform);
-            dam = false;
         }
     }
 }
