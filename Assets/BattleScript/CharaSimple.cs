@@ -59,12 +59,14 @@ public class CharaSimple : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             E_bullet = other.GetComponent<Bullet>();
-            HP -= E_bullet.power;
-            dam_text = Instantiate(text, this.transform.position, Quaternion.Euler(0f, 0f, 0f)).GetComponent<DamageText>();
-            dam_text.damage = E_bullet.power;
-            Destroy(other.gameObject);
-            if (HP <= 0) {
-                Destroy(this.gameObject);
+            if (E_bullet.isFriend != isFriend) {
+                HP -= E_bullet.power;
+                //dam_text = Instantiate(text, this.transform.position, Quaternion.Euler(0f, 0f, 0f)).GetComponent<DamageText>();
+                //dam_text.damage = E_bullet.power;
+                Destroy(other.gameObject);
+                if (HP <= 0) {
+                    Destroy(this.gameObject);
+                }
             }
         }
     }
@@ -95,7 +97,6 @@ public class CharaSimple : MonoBehaviour
     {
         //anim.SetBool("isAttack", true);
         isAttacking = true;
-        //dam = true;
     }
     
     private void endAttack()
@@ -113,5 +114,4 @@ public class CharaSimple : MonoBehaviour
             Instantiate(bullet, this.transform.position, Quaternion.Euler(0.0f, 0.0f, 0.0f), this.transform);
         }
     }
-
 }

@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     private float time;
     public int power;
     public float attackRange;
+    public bool isFriend;
     void Start()
     {
         charaController = GetComponentInParent<CharaSimple>();
@@ -23,7 +24,7 @@ public class Bullet : MonoBehaviour
         }
 
         second = attackRange / speed;
-        if (!charaController.isFriend)
+        if (!(isFriend = charaController.isFriend))
             speed = -speed;
     }
 
@@ -31,7 +32,7 @@ public class Bullet : MonoBehaviour
     {
         time += Time.fixedDeltaTime;
 
-        this.transform.Translate(speed * Time.deltaTime, 0.0f, 0.0f);
+        this.transform.Translate(speed * Time.fixedDeltaTime, 0.0f, 0.0f);
         if (time >= second) {
             Destroy(this.gameObject);
         }

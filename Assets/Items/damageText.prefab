@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7091749067800711342}
   - component: {fileID: 7091749067800711336}
   - component: {fileID: 7091749067800711343}
+  - component: {fileID: 3075668872770859118}
   m_Layer: 5
   m_Name: damageText
   m_TagString: Untagged
@@ -80,3 +81,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
+--- !u!114 &3075668872770859118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7091749067800711341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed7d87d8e34af64c9b600d7e60288f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.1
+  deadtime: 2
+  damage: 0
