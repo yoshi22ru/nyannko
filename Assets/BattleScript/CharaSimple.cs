@@ -21,8 +21,6 @@ public class CharaSimple : MonoBehaviour
 
     // variable to attack
     [SerializeField] private GameObject bullet;
-    //private bool dam;
-
 
     public LayerMask enemyForMe;
     private bool isAttacking = false;
@@ -31,6 +29,8 @@ public class CharaSimple : MonoBehaviour
 
     // damage
     Bullet E_bullet;
+    public GameObject text;
+    DamageText dam_text;
 
     void FixedUpdate()
     {
@@ -54,12 +54,15 @@ public class CharaSimple : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("bullet"))
+        if (other.CompareTag("Bullet"))
         {
             E_bullet = other.GetComponent<Bullet>();
             HP -= E_bullet.power;
+            dam_text = Instantiate(text, this.transform.position, Quaternion.Euler(0f, 0f, 0f)).GetComponent<DamageText>();
+            dam_text.damage = E_bullet.power;
+            Destroy(other.gameObject);
             if (HP <= 0) {
                 Destroy(this.gameObject);
             }
@@ -106,8 +109,9 @@ public class CharaSimple : MonoBehaviour
 
     private void damage()
     {
-        if (damageTime <= animetime) {
+        if (damageTime <= animetime && damageTime + Time.fixedDeltaTime > animetime) {
             Instantiate(bullet, this.transform.position, Quaternion.Euler(0.0f, 0.0f, 0.0f), this.transform);
         }
     }
+
 }
