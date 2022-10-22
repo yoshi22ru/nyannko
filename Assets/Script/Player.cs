@@ -30,11 +30,30 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ñ°ï˚ÇÃHPä«óù.Instance.isDead)     
+        if (ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩHPÔøΩ«óÔøΩ.Instance.isDead)     
         anim.Play("Dead");
     }
 
-
-
+    //==========================================================================================================================
+    // damage prosess
+    //==========================================================================================================================
+    Bullet E_bullet;
+    [SerializeField] private GameObject Player_HP;
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bullet"))
+        {
+            E_bullet = other.GetComponent<Bullet>();
+            if (!E_bullet.isFriend) {
+                HP -= E_bullet.power;
+                Debug.Log("„ÉÄ„É°„Éº„Ç∏" + E_bullet.power);
+                //dam_text = Instantiate(text, this.transform.position, Quaternion.Euler(0f, 0f, 0f)).GetComponent<DamageText>();
+                //dam_text.damage = E_bullet.power;
+                if (HP <= 0) {
+                    Destroy(this.gameObject);
+                }
+            }
+        }
+    }
 
 }

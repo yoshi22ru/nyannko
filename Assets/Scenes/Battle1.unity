@@ -3415,6 +3415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u81EA\u9663"
       objectReference: {fileID: 0}
+    - target: {fileID: 1364022623219259602, guid: a4af163467ae55f41866ec7dec419147, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1364022623219259604, guid: a4af163467ae55f41866ec7dec419147, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3458,6 +3462,10 @@ PrefabInstance:
     - target: {fileID: 1364022623219259604, guid: a4af163467ae55f41866ec7dec419147, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364022623219259608, guid: a4af163467ae55f41866ec7dec419147, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4af163467ae55f41866ec7dec419147, type: 3}

@@ -38,21 +38,16 @@ public class CharaSimple : MonoBehaviour
     {
         if (!isAttacking) {// if I`m not attacking
             checkRange();   // check enemy in attack range
-            if (castHit) {// if enemy is in attack range
-                Debug.Log("Encounted");
+            if (castHit) {// enemy is in attack range
                 attack();// start attack
             }
-            else {// if there is no enemy in attack range
+            else {// there is no enemy in attack range
                 walk();// walk to enemy catsle
             }
         }
         else {// if I`m attacking
-            if (animetime >= attackAnimationLength) // if attack ainme is ended
-                endAttack();// end attack
-            else {
-                animetime += Time.deltaTime;
-                damage();
-            }
+            animetime += Time.deltaTime;
+            damage();
         }
     }
 
@@ -117,6 +112,9 @@ public class CharaSimple : MonoBehaviour
                 attacker = Instantiate(bullet, this.transform.position + new Vector3( attackRange / 2f,0,0), Quaternion.Euler(0.0f, 0.0f, 0.0f), this.transform);
             else
                 attacker = Instantiate(bullet, this.transform.position - new Vector3( attackRange / 2f,0,0), Quaternion.Euler(0.0f, 0.0f, 0.0f), this.transform);
+            
+            isAttacking = false;
+            animetime = 0f;
         }
     }
 }
