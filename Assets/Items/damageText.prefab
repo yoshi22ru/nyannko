@@ -95,4 +95,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.1
   deadtime: 2
+  text: {fileID: 7091749067800711343}
   damage: 0

@@ -5,35 +5,27 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     CharaSimple charaController;
-    private int speed = 10;
-    private float second;
+    public float destroyTime;
     private float time;
     public int power;
     public float attackRange;
     public bool isFriend;
-    void Start()
+    //public bool type;
+    void Awake()
     {
         charaController = GetComponentInParent<CharaSimple>();
-        if (charaController != null) {
-            power = charaController.power;
-            attackRange = charaController.attackRange;
-        }
-        else {
-            power = 0;
-            attackRange = 0;
-        }
+        power = charaController.power;
+        isFriend = charaController.isFriend;
 
-        second = attackRange / speed;
-        if (!(isFriend = charaController.isFriend))
-            speed = -speed;
+    }
+    void Start()
+    {
     }
 
     void FixedUpdate()
     {
         time += Time.fixedDeltaTime;
-
-        this.transform.Translate(speed * Time.fixedDeltaTime, 0.0f, 0.0f);
-        if (time >= second) {
+        if (time >= destroyTime) {
             Destroy(this.gameObject);
         }
     }

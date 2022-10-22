@@ -32,6 +32,8 @@ public class CharaSimple : MonoBehaviour
     public GameObject text;
     DamageText dam_text;
 
+    GameObject attacker;
+
     void FixedUpdate()
     {
         if (!isAttacking) {// if I`m not attacking
@@ -61,9 +63,9 @@ public class CharaSimple : MonoBehaviour
             E_bullet = other.GetComponent<Bullet>();
             if (E_bullet.isFriend != isFriend) {
                 HP -= E_bullet.power;
+                Debug.Log("ダメージ" + E_bullet.power);
                 //dam_text = Instantiate(text, this.transform.position, Quaternion.Euler(0f, 0f, 0f)).GetComponent<DamageText>();
                 //dam_text.damage = E_bullet.power;
-                Destroy(other.gameObject);
                 if (HP <= 0) {
                     Destroy(this.gameObject);
                 }
@@ -74,10 +76,10 @@ public class CharaSimple : MonoBehaviour
     private void checkRange()
     {
         if (isFriend) {
-            castHit = Physics2D.BoxCast(this.transform.position, new Vector2(0.1f, 1f), 0f, transform.right, attackRange, enemyForMe);
+            castHit = Physics2D.BoxCast(this.transform.position, new Vector2(0.1f, 1f), 0f, transform.right, attackRange / 2f, enemyForMe);
         }
         else {
-            castHit = Physics2D.BoxCast(this.transform.position, new Vector2(0.1f, 1f), 0f, transform.right, attackRange, enemyForMe);
+            castHit = Physics2D.BoxCast(this.transform.position, new Vector2(0.1f, 1f), 0f, transform.right, attackRange / 2f, enemyForMe);
         }
     }
 
@@ -111,7 +113,10 @@ public class CharaSimple : MonoBehaviour
     private void damage()
     {
         if (damageTime <= animetime && damageTime + Time.fixedDeltaTime > animetime) {
-            Instantiate(bullet, this.transform.position, Quaternion.Euler(0.0f, 0.0f, 0.0f), this.transform);
+            if (isFriend)
+                attacker = Instantiate(bullet, this.transform.position + new Vector3( attackRange / 2f,0,0), Quaternion.Euler(0.0f, 0.0f, 0.0f), this.transform);
+            else
+                attacker = Instantiate(bullet, this.transform.position - new Vector3( attackRange / 2f,0,0), Quaternion.Euler(0.0f, 0.0f, 0.0f), this.transform);
         }
     }
 }

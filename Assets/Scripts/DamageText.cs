@@ -8,7 +8,7 @@ public class DamageText : MonoBehaviour
     [SerializeField] private float speed = 0.01f;
     [SerializeField] private float deadtime = 2f;
     float time = 0;
-    Text text;
+    [SerializeField] private Text text;
     public int damage;
     void Start()
     {

@@ -12,7 +12,7 @@ public class EnemyPop : MonoBehaviour
     private float time;
     void Start()
     {
-        time = 0;
+        time = 1;
     }
     void FixedUpdate()
     {
