@@ -92,7 +92,7 @@ public class PerlinNoiseShaker_player : MonoBehaviour
     // U“®ˆ—
     private void Update()
     {
-        if (–¡•û‚ÌHPŠÇ—.Instance.ishit&&!“G‚ÌHPŠÇ—.Instance.isDead)
+        if (Player_HPManager.Instance.ishit&&!Enemy_HPManager.Instance.isDead)
         {
 
             // ƒQ[ƒ€ŠJn‚©‚ç‚ÌŠÔæ“¾

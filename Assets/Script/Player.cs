@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (������HP�Ǘ�.Instance.isDead)     
+        if (Player_HPManager.Instance.isDead)     
         anim.Play("Dead");
     }
 

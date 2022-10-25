@@ -17,7 +17,7 @@ public class LoseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(–¡•û‚ÌHPŠÇ—.Instance.isLose)
+        if(Player_HPManager.Instance.isLose)
         {
             Debug.Log("”s–kƒpƒlƒ‹‚ğ•\¦");
             LosePanel.SetActive(true);

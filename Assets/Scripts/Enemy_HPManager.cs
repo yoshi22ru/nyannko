@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class 敵のHP管理 : MonoBehaviour
+public class Enemy_HPManager : MonoBehaviour
 {
     public GameObject 敵のhp_object = null;
     public GameObject 味方のhp_object = null;
     public int 敵のhp = 0;
     public int 味方のhp = 0;
-    public static 敵のHP管理 Instance;
+    public static Enemy_HPManager Instance;
     public AudioClip hitSE;
     public AudioClip winSE;
   
@@ -34,7 +34,7 @@ public class 敵のHP管理 : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         Text 敵のhp_text = 敵のhp_object.GetComponent<Text>();
-        敵のhp_text.text = "HP" + ":" + 敵のHP管理.Instance.敵のhp;
+        敵のhp_text.text = "HP" + ":" + Enemy_HPManager.Instance.敵のhp;
 
     }
 
@@ -45,7 +45,7 @@ public class 敵のHP管理 : MonoBehaviour
         Text 敵のhp_text = 敵のhp_object.GetComponent<Text>();
         Text hp_text = 味方のhp_object.GetComponent<Text>();
 
-        if (敵のhp != 0 && !味方のHP管理.Instance.isDead)
+        if (敵のhp != 0 && !Player_HPManager.Instance.isDead)
         {
             isDead = false;
             isWin = false;
@@ -57,7 +57,7 @@ public class 敵のHP管理 : MonoBehaviour
             
                 
 
-            if ( 敵のhp == 0 && !味方のHP管理.Instance.isDead)
+            if ( 敵のhp == 0 && !Player_HPManager.Instance.isDead)
             {
                 Debug.Log("勝利");
                 isDead = true;
@@ -71,8 +71,8 @@ public class 敵のHP管理 : MonoBehaviour
 
 
 
-                    hp_text.text = "HP" + ":" + 味方のHP管理.Instance.味方のhp;
-                    味方のHP管理.Instance.味方のhp = 味方のHP管理.Instance.味方のhp;
+                    hp_text.text = "HP" + ":" + Player_HPManager.Instance.味方のhp;
+                    Player_HPManager.Instance.味方のhp = Player_HPManager.Instance.味方のhp;
                     Debug.Log("終了");
                 
             }

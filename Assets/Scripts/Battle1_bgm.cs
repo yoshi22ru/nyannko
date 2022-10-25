@@ -16,7 +16,7 @@ public class Battle1_bgm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (–¡•û‚ÌHPŠÇ—.Instance.isDead || “G‚ÌHPŠÇ—.Instance.isDead)
+        if (Player_HPManager.Instance.isDead || Enemy_HPManager.Instance.isDead)
             audioSource.Stop();
     }
   

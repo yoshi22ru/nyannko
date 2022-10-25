@@ -92,7 +92,7 @@ public class PerlinNoiseShaker_enemy : MonoBehaviour
     // U“®ˆ—
     private void Update()
     {
-        if (“G‚ÌHPŠÇ—.Instance.ishit&&!–¡•û‚ÌHPŠÇ—.Instance.isDead)
+        if (Enemy_HPManager.Instance.ishit&&!Player_HPManager.Instance.isDead)
         {
             // ƒQ[ƒ€ŠJn‚©‚ç‚ÌŠÔæ“¾
             var time = Time.time;
