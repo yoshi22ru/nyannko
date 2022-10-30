@@ -16,7 +16,6 @@ public class RaidButtonFather : MonoBehaviour
 
             RaidButton raidButton = slotObj.GetComponent<RaidButton>();
 
-            //�X���b�g�ɃA�C�e�����Z�b�g������
             if (i < raidMenu.charaDataBase.charadata.Count)
             {
                 raidButton.myNumber = i;

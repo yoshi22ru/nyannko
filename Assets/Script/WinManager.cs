@@ -18,9 +18,9 @@ public class WinManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(“G‚ÌHPŠÇ—.Instance.isWin)
+        if(Enemy_HPManager.Instance.isWin)
         {
-            Debug.Log("Ÿ—˜ƒpƒlƒ‹‚ğ•\¦");
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½pï¿½lï¿½ï¿½ï¿½ï¿½ï¿½");
             WinPanel.SetActive(true);
         }
     }

@@ -30,11 +30,24 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ìGÇÃHPä«óù.Instance.isDead)
+        if (Enemy_HPManager.Instance.isDead)
             anim.Play("Dead");
     }
 
-
+    //==========================================================================================================================
+    // damage prosess
+    //==========================================================================================================================
+    Bullet E_bullet;
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bullet"))
+        {
+            E_bullet = other.GetComponent<Bullet>();
+            if (E_bullet.isFriend) {
+                Enemy_HPManager.Instance.Damage(other, E_bullet.power);
+            }
+        }
+    }
 
 
 }

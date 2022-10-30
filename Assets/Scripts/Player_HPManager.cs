@@ -35,7 +35,7 @@ public class Player_HPManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnCollisionEnter(Collision collision)
+    public void Damage(Collider2D collision, int power)
     {
         Debug.Log(collision.gameObject.name + "と接触");
         Text hp_text = 味方のhp_object.GetComponent<Text>();
@@ -45,8 +45,8 @@ public class Player_HPManager : MonoBehaviour
         {
             isDead = false;
             isLose = false;
+            味方のhp -= power;
             hp_text.text = "HP" + ":" + 味方のhp;
-            味方のhp -= 1;
 
             
 

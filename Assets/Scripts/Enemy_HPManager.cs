@@ -39,7 +39,7 @@ public class Enemy_HPManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnCollisionEnter(Collision collision)
+    public void Damage(Collider2D collision, int power)
     {
         Debug.Log(collision.gameObject.name + "と接触した");
         Text 敵のhp_text = 敵のhp_object.GetComponent<Text>();
@@ -49,8 +49,8 @@ public class Enemy_HPManager : MonoBehaviour
         {
             isDead = false;
             isWin = false;
+            敵のhp -= power;
             敵のhp_text.text = "HP" + ":" + 敵のhp;
-            敵のhp -= 1;
 
             ishit = true;
             audioSource.PlayOneShot(hitSE);

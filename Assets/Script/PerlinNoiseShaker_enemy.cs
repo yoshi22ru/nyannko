@@ -5,46 +5,46 @@ using UnityEngine;
 
 public class PerlinNoiseShaker_enemy : MonoBehaviour
 {
-    // ’Pˆê‚Ìƒp[ƒŠƒ“ƒmƒCƒYî•ñ‚ğŠi”[‚·‚é\‘¢‘Ì
+    // ï¿½Pï¿½ï¿½Ìƒpï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½Cï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½iï¿½[ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½
     [Serializable]
     private struct NoiseParam
     {
-        // U•
+        // ï¿½Uï¿½ï¿½
         public float amplitude;
 
-        // U“®‚Ì‘¬‚³
+        // ï¿½Uï¿½ï¿½ï¿½Ì‘ï¿½ï¿½ï¿½
         public float speed;
 
-        // ƒp[ƒŠƒ“ƒmƒCƒY‚ÌƒIƒtƒZƒbƒg
+        // ï¿½pï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½Cï¿½Yï¿½ÌƒIï¿½tï¿½Zï¿½bï¿½g
         [NonSerialized] public float offset;
 
-        // —”‚ÌƒIƒtƒZƒbƒg’l‚ğw’è‚·‚é
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ÌƒIï¿½tï¿½Zï¿½bï¿½gï¿½lï¿½ï¿½ï¿½wï¿½è‚·ï¿½ï¿½
         public void SetRandomOffset()
         {
             offset = UnityEngine.Random.Range(0f, 256f);
         }
 
-        // w’è‚Ìƒp[ƒŠƒ“ƒmƒCƒY’l‚ğæ“¾‚·‚é
+        // ï¿½wï¿½èï¿½ï¿½ï¿½Ìƒpï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½Cï¿½Yï¿½lï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½
         public float GetValue(float time)
         {
-            // ƒmƒCƒYˆÊ’u‚ğŒvZ
+            // ï¿½mï¿½Cï¿½Yï¿½Ê’uï¿½ï¿½ï¿½vï¿½Z
             var noisePos = speed * time + offset;
 
-            // -1`1‚Ì”ÍˆÍ‚ÌƒmƒCƒY’l‚ğæ“¾
+            // -1ï¿½`1ï¿½Ì”ÍˆÍ‚Ìƒmï¿½Cï¿½Yï¿½lï¿½ï¿½ï¿½æ“¾
             var noiseValue = 2 * (Mathf.PerlinNoise(noisePos, 0) - 0.5f);
 
-            // U•‚ğŠ|‚¯‚½’l‚ğ•Ô‚·
+            // ï¿½Uï¿½ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½Ô‚ï¿½
             return amplitude * noiseValue;
         }
     }
 
-    // ƒp[ƒŠƒ“ƒmƒCƒY‚ÌXYZî•ñ
+    // ï¿½pï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½Cï¿½Yï¿½ï¿½XYZï¿½ï¿½ï¿½
     [Serializable]
     private struct NoiseTransform
     {
         public NoiseParam x, y, z;
 
-        // xyz¬•ª‚É—”‚ÌƒIƒtƒZƒbƒg’l‚ğw’è‚·‚é
+        // xyzï¿½ï¿½ï¿½ï¿½ï¿½É—ï¿½ï¿½ï¿½ï¿½ÌƒIï¿½tï¿½Zï¿½bï¿½gï¿½lï¿½ï¿½ï¿½wï¿½è‚·ï¿½ï¿½
         public void SetRandomOffset()
         {
             x.SetRandomOffset();
@@ -52,7 +52,7 @@ public class PerlinNoiseShaker_enemy : MonoBehaviour
             z.SetRandomOffset();
         }
 
-        // w’è‚Ìƒp[ƒŠƒ“ƒmƒCƒY’l‚ğæ“¾‚·‚é
+        // ï¿½wï¿½èï¿½ï¿½ï¿½Ìƒpï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½Cï¿½Yï¿½lï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½
         public Vector3 GetValue(float time)
         {
             return new Vector3(
@@ -63,45 +63,45 @@ public class PerlinNoiseShaker_enemy : MonoBehaviour
         }
     }
 
-    // ˆÊ’u‚Ì—h‚êî•ñ
+    // ï¿½Ê’uï¿½Ì—hï¿½ï¿½ï¿½ï¿½
     [SerializeField] private NoiseTransform _noisePosition;
 
-    // ‰ñ“]‚Ì—h‚êî•ñ
+    // ï¿½ï¿½]ï¿½Ì—hï¿½ï¿½ï¿½ï¿½
     [SerializeField] private NoiseTransform _noiseRotation;
 
     private Transform _transform;
 
-    // Transform‚Ì‰Šúó‘Ô
+    // Transformï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private Vector3 _initLocalPosition;
     private Quaternion _initLocalQuaternion;
 
-    // ‰Šú‰»
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private void Awake()
     {
         _transform = transform;
 
-        // Transform‚Ì‰Šú’l‚ğ•Û
+        // Transformï¿½Ìï¿½ï¿½ï¿½ï¿½lï¿½ï¿½Ûï¿½
         _initLocalPosition = _transform.localPosition;
         _initLocalQuaternion = _transform.localRotation;
 
-        // ƒp[ƒŠƒ“ƒmƒCƒY‚ÌƒIƒtƒZƒbƒg‰Šú‰»
+        // ï¿½pï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½Cï¿½Yï¿½ÌƒIï¿½tï¿½Zï¿½bï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         _noisePosition.SetRandomOffset();
         _noiseRotation.SetRandomOffset();
     }
 
-    // U“®ˆ—
+    // ï¿½Uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private void Update()
     {
-        if (Enemy_HPManager.Instance.ishit&&!Player_HPManager.Instance.isDead)
+        if (Enemy_HPManager.Instance.ishit && !Player_HPManager.Instance.isDead)
         {
-            // ƒQ[ƒ€ŠJn‚©‚ç‚ÌŠÔæ“¾
+            // ï¿½Qï¿½[ï¿½ï¿½ï¿½Jï¿½nï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½Ôæ“¾
             var time = Time.time;
 
-            // ƒp[ƒŠƒ“ƒmƒCƒY‚Ì’l‚ğ‚©‚çæ“¾
+            // ï¿½pï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½Cï¿½Yï¿½Ì’lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ“¾
             var noisePos = _noisePosition.GetValue(time);
             var noiseRot = _noiseRotation.GetValue(time);
 
-            // ŠeTransform‚Éƒp[ƒŠƒ“ƒmƒCƒY‚Ì’l‚ğ‰ÁZ
+            // ï¿½eTransformï¿½Éƒpï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½Cï¿½Yï¿½Ì’lï¿½ï¿½ï¿½ï¿½ï¿½Z
             _transform.localPosition = _initLocalPosition + noisePos;
             _transform.localRotation = Quaternion.Euler(noiseRot) * _initLocalQuaternion;
         }
