@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CharaPop : MonoBehaviour
 {
-    private InfomationCounter info;
+    InfomationCounter info;
     [SerializeField] private int MyNumber;
     [SerializeField] private Image SlotSprite;
     [SerializeField] private Text SlotText;
@@ -24,8 +24,9 @@ public class CharaPop : MonoBehaviour
 
     private void Pop()
     {
-        if (interval <= interval_count) {
+        if (interval <= interval_count && info.Raid[MyNumber].CharaCost <= BattleManager.Instance.money) {
             interval_count = 0;
+            BattleManager.Instance.account(info.Raid[MyNumber].CharaCost);
             Instantiate(info.Raid[MyNumber].BattleChara, PopPos.position, Quaternion.Euler(0f, 0f, 0f));
         }
     }

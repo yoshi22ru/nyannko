@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class BattleManager : MonoBehaviour
 {
+    public static BattleManager Instance;
     [SerializeField] private Button stop;
     //[SerializeField] private Button LevelUp;
     [SerializeField] private Text Money;
@@ -15,12 +16,13 @@ public class BattleManager : MonoBehaviour
     [SerializeField] private Button quit;
     Button setting;
     int nowLevel;
-    float money;
+    public float money;
     int amount;
     public float[] moneySpeed;
 
     void Start()
     {
+        Instance=this;
         nowLevel = 0;
         stop.onClick.AddListener(Stop);
         quit.onClick.AddListener(Quit);
@@ -60,7 +62,7 @@ public class BattleManager : MonoBehaviour
 
     public void account(int value)
     {
-        money -= value;
+        money -= (float)value;
     }
 
     private void Quit()
