@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Shield
   itemImage: {fileID: -5878569456898858483, guid: 3765a367fb48f9040bca18add088d6d3, type: 3}
-  Chara: {fileID: 8165155841467314063, guid: 6d728c22ad084e542a7bb9940db88a4f, type: 3}
+  Chara: {fileID: 4646070196878831483, guid: 249ca8ef90dc20646a65b840a60930a1, type: 3}
   Cost: 1
   earnedExperience: 0
