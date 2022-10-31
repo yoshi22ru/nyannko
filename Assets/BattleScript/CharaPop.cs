@@ -8,7 +8,7 @@ public class CharaPop : MonoBehaviour
     InfomationCounter info;
     [SerializeField] private int MyNumber;
     [SerializeField] private Image SlotSprite;
-    [SerializeField] private Text SlotText;
+    [SerializeField] private Text Cost_text;
     [SerializeField] private Transform PopPos;
     public const float interval = 3f;
     private float interval_count;
@@ -18,7 +18,7 @@ public class CharaPop : MonoBehaviour
         this.GetComponent<Button>().onClick.AddListener(Pop);
         if (MyNumber < info.Raid.Count) {
             SlotSprite.sprite = info.Raid[MyNumber].MyItemImage;
-            SlotText.text = info.Raid[MyNumber].MyItemName;
+            Cost_text.text = info.Raid[MyNumber].CharaCost.ToString();
         }
     }
 
