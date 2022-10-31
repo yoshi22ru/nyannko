@@ -41,7 +41,7 @@ public class Player_HPManager : MonoBehaviour
         Text hp_text = 味方のhp_object.GetComponent<Text>();
         Text 敵のhp_text = 敵のhp_object.GetComponent<Text>();
 
-        if (味方のhp != 0 && !Enemy_HPManager.Instance.isDead)
+        if (味方のhp > 0 && !Enemy_HPManager.Instance.isDead)
         {
             isDead = false;
             isLose = false;
@@ -57,7 +57,7 @@ public class Player_HPManager : MonoBehaviour
             
             
 
-            if ( 味方のhp == 0 && !Enemy_HPManager.Instance.isDead)
+            if ( 味方のhp <= 0 && !Enemy_HPManager.Instance.isDead)
             {
                 Debug.Log("敗北");
                 isDead = true;
