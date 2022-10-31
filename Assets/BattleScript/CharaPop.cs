@@ -27,7 +27,7 @@ public class CharaPop : MonoBehaviour
         if (interval <= interval_count && info.Raid[MyNumber].CharaCost <= BattleManager.Instance.money) {
             interval_count = 0;
             BattleManager.Instance.account(info.Raid[MyNumber].CharaCost);
-            Instantiate(info.Raid[MyNumber].BattleChara, PopPos.position, Quaternion.Euler(0f, 0f, 0f));
+            Instantiate(info.Raid[MyNumber].BattleChara, PopPos.position - transform.up*0.5f, Quaternion.Euler(0f, 0f, 0f));
         }
     }
     void FixedUpdate()

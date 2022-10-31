@@ -41,18 +41,18 @@ public class SoundManager : MonoBehaviour
     }
     void Start()
     {
-        GameObject soundManager = CheckOtherSoundManager();
-        bool checkResult = soundManager != null && soundManager != gameObject;
-        if (checkResult)
+        //GameObject soundManager = CheckOtherSoundManager();
+        //bool checkResult = soundManager != null && soundManager != gameObject;
+        //if (checkResult)
         {
             Destroy(gameObject);
         }
         //DontDestroyOnLoad(gameObject);
     }
-    GameObject CheckOtherSoundManager()
-    {
-        return GameObject.FindGameObjectWithTag("SoundManager");
-    }
+    //GameObject CheckOtherSoundManager()
+    
+        //return GameObject.FindGameObjectWithTag("SoundManager");
+    
     public void PlayBgm(AudioClip clip)
     {
         bgmAudioSource.clip = clip;
