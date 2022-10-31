@@ -6,6 +6,7 @@ public class WinManager : MonoBehaviour
 {
     public GameObject WinPanel;
     public static WinManager Instance;
+    public GameObject notactivecanvas;
 
 
     void Awake()
@@ -20,6 +21,8 @@ public class WinManager : MonoBehaviour
     {
         if(Enemy_HPManager.Instance.isWin)
         {
+            notactivecanvas.SetActive(false);
+
             Debug.Log("�����p�l�����");
             WinPanel.SetActive(true);
         }

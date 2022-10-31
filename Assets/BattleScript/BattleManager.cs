@@ -14,6 +14,9 @@ public class BattleManager : MonoBehaviour
     [SerializeField] private int[] levelUpMoney;
     [SerializeField] private GameObject Pause;
     [SerializeField] private Button quit;
+    [SerializeField] private Button menuwin;
+    [SerializeField] private Button menulose;
+    [SerializeField] private GameObject notactivecanvas;
     Button setting;
     int nowLevel;
     public float money;
@@ -26,6 +29,8 @@ public class BattleManager : MonoBehaviour
         nowLevel = 0;
         stop.onClick.AddListener(Stop);
         quit.onClick.AddListener(Quit);
+        menuwin.onClick.AddListener(menuw);
+        menulose.onClick.AddListener(menul);
 //        LevelUp.onClick.AddListener(levelUp);
     }
 
@@ -34,7 +39,7 @@ public class BattleManager : MonoBehaviour
         money += Time.deltaTime * moneySpeed[nowLevel];
 
         amount = Mathf.RoundToInt(money);
-        Money.text = amount + "円";
+        Money.text = "$" + amount;
     }
 
     private void Stop()
@@ -43,10 +48,12 @@ public class BattleManager : MonoBehaviour
         {
             Time.timeScale = 1.0f;
             Pause.SetActive(false);
+            notactivecanvas.SetActive(true);
         }
         else 
         {
             Time.timeScale = 0.0f;
+            notactivecanvas.SetActive(false);
             Pause.SetActive(true);
         }
     }
@@ -70,4 +77,14 @@ public class BattleManager : MonoBehaviour
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("menu");
     }
+
+    private void menuw()
+    {
+        SceneManager.LoadScene("menu");
+    }
+    private void menul()
+    {
+        SceneManager.LoadScene("menu");
+    }
+
 }

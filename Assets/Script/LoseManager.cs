@@ -7,6 +7,8 @@ public class LoseManager : MonoBehaviour
 {
     public GameObject LosePanel;
     public static LoseManager Instance;
+    public GameObject notactivecanvas;
+
 
     void Awake()
     {
@@ -19,6 +21,7 @@ public class LoseManager : MonoBehaviour
     {
         if(Player_HPManager.Instance.isLose)
         {
+            notactivecanvas.SetActive(false);
             Debug.Log("”s–kƒpƒlƒ‹‚ð•\Ž¦");
             LosePanel.SetActive(true);
         }
