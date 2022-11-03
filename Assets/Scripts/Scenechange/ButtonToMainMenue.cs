@@ -13,6 +13,7 @@ public class ButtonToMainMenue : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         button.onClick.AddListener(backToMainMenu);
+        DontDestroyOnLoad(this.gameObject);
     }
     void backToMainMenu()
     {

@@ -7,11 +7,13 @@ public class Enemy : MonoBehaviour
 {
     public static Enemy Instance;
 
-   
+    public AudioClip winSE;
 
     private Animator anim = null;
 
-    public bool isDead = false;
+   
+
+    
 
     public void Awake()
     {
@@ -24,7 +26,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-       
+        
     }
 
     // Update is called once per frame
@@ -32,6 +34,7 @@ public class Enemy : MonoBehaviour
     {
         if (Enemy_HPManager.Instance.isDead)
             anim.Play("Dead");
+            
     }
 
     //==========================================================================================================================

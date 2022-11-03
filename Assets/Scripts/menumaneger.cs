@@ -18,6 +18,7 @@ public class menumaneger : MonoBehaviour
         hensei.GetComponent<Button>().onClick.AddListener(Hensei);
         back.GetComponent<Button>().onClick.AddListener(Back);
         start.GetComponent<Button>().onClick.AddListener(St);
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame

@@ -7,15 +7,13 @@ public class WinManager : MonoBehaviour
     public GameObject WinPanel;
     public static WinManager Instance;
     public GameObject notactivecanvas;
-
-
+  
     void Awake()
     {
         if (Instance = null)
             Instance = this;
     }
     
-
     // Update is called once per frame
     void Update()
     {
@@ -25,6 +23,8 @@ public class WinManager : MonoBehaviour
 
             Debug.Log("�����p�l�����");
             WinPanel.SetActive(true);
+
+           
         }
     }
 }
