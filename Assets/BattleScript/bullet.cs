@@ -16,7 +16,14 @@ public class Bullet : MonoBehaviour
         charaController = GetComponentInParent<CharaSimple>();
         power = charaController.power;
         isFriend = charaController.isFriend;
+        var localScale = this.transform.localScale;
+        var parentLossyScale = this.transform.parent.lossyScale;
 
+        this.transform.localScale = new Vector3(
+        localScale.x / parentLossyScale.x,
+        localScale.y / parentLossyScale.y,
+        localScale.z / parentLossyScale.z
+        );
     }
     void Start()
     {
