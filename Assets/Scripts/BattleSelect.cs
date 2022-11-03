@@ -10,7 +10,7 @@ public class BattleSelect : MonoBehaviour
     [SerializeField] private SelectManager select;
     [SerializeField] private Button button;
     [SerializeField] private GameObject LoadPanel;
-    //ˆÈ‰º’Ç‹L
+    //ï¿½È‰ï¿½ï¿½Ç‹L
     [SerializeField] private AudioClip styutugekiSE;
     AudioSource audioSource;
     public int StageNum;
@@ -22,24 +22,65 @@ public class BattleSelect : MonoBehaviour
     public void BattleStart()
     {
         audioSource.PlayOneShot(styutugekiSE);
-        StartCoroutine(LoadScene());
+        if (StageNum == 1)
+            StartCoroutine(LoadScene1());
+        else if (StageNum == 2)
+            StartCoroutine(LoadScene2());
+        else if (StageNum == 3)
+            StartCoroutine(LoadScene3());
     }
 
-    private IEnumerator LoadScene()
+    private IEnumerator LoadScene1()
     {
-        //”ñ“¯Šú‚Åƒ[ƒh‚ğs‚¤    
+        //ï¿½ñ“¯Šï¿½ï¿½Åƒï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½sï¿½ï¿½    
         var asyncLoad = SceneManager.LoadSceneAsync("Battle1");
 
-        //ƒ[ƒh‚ªŠ®—¹‚µ‚Ä‚àAƒV[ƒ“‚ÌƒAƒNƒeƒBƒu‰»‚ğ‹–‰Â‚µ‚È‚¢
+        //ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Aï¿½Vï¿½[ï¿½ï¿½ï¿½ÌƒAï¿½Nï¿½eï¿½Bï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½È‚ï¿½
         asyncLoad.allowSceneActivation = false;
 
-        //ƒtƒF[ƒhƒAƒEƒg‚Æƒ[ƒh‘Ò‹@
+        //ï¿½tï¿½Fï¿½[ï¿½hï¿½Aï¿½Eï¿½gï¿½Æƒï¿½ï¿½[ï¿½hï¿½Ò‹@
         yield return FadeOut();
 
-        //ƒ[ƒh‚ªŠ®—¹‚µ‚½‚ÉƒV[ƒ“‚ÌƒAƒNƒeƒBƒu‰»‚ğ‹–‰Â‚·‚é
+        //ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÉƒVï¿½[ï¿½ï¿½ï¿½ÌƒAï¿½Nï¿½eï¿½Bï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½
         asyncLoad.allowSceneActivation = true;
 
-        //ƒ[ƒh‚ªŠ®—¹‚·‚é‚Ü‚Å‘Ò‚Â
+        //ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å‘Ò‚ï¿½
+        yield return asyncLoad;
+
+    }
+    private IEnumerator LoadScene2()
+    {
+        //ï¿½ñ“¯Šï¿½ï¿½Åƒï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½sï¿½ï¿½    
+        var asyncLoad = SceneManager.LoadSceneAsync("Battle2");
+
+        //ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Aï¿½Vï¿½[ï¿½ï¿½ï¿½ÌƒAï¿½Nï¿½eï¿½Bï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½È‚ï¿½
+        asyncLoad.allowSceneActivation = false;
+
+        //ï¿½tï¿½Fï¿½[ï¿½hï¿½Aï¿½Eï¿½gï¿½Æƒï¿½ï¿½[ï¿½hï¿½Ò‹@
+        yield return FadeOut();
+
+        //ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÉƒVï¿½[ï¿½ï¿½ï¿½ÌƒAï¿½Nï¿½eï¿½Bï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½
+        asyncLoad.allowSceneActivation = true;
+
+        //ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å‘Ò‚ï¿½
+        yield return asyncLoad;
+
+    }
+    private IEnumerator LoadScene3()
+    {
+        //ï¿½ñ“¯Šï¿½ï¿½Åƒï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½sï¿½ï¿½    
+        var asyncLoad = SceneManager.LoadSceneAsync("Battle3");
+
+        //ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Aï¿½Vï¿½[ï¿½ï¿½ï¿½ÌƒAï¿½Nï¿½eï¿½Bï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½È‚ï¿½
+        asyncLoad.allowSceneActivation = false;
+
+        //ï¿½tï¿½Fï¿½[ï¿½hï¿½Aï¿½Eï¿½gï¿½Æƒï¿½ï¿½[ï¿½hï¿½Ò‹@
+        yield return FadeOut();
+
+        //ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÉƒVï¿½[ï¿½ï¿½ï¿½ÌƒAï¿½Nï¿½eï¿½Bï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½
+        asyncLoad.allowSceneActivation = true;
+
+        //ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å‘Ò‚ï¿½
         yield return asyncLoad;
 
     }
