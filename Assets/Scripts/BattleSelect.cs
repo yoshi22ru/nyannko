@@ -10,13 +10,18 @@ public class BattleSelect : MonoBehaviour
     [SerializeField] private SelectManager select;
     [SerializeField] private Button button;
     [SerializeField] private GameObject LoadPanel;
+    //ˆÈ‰º’Ç‹L
+    [SerializeField] private AudioClip styutugekiSE;
+    AudioSource audioSource;
     public int StageNum;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         button.onClick.AddListener(BattleStart);
     }
     public void BattleStart()
     {
+        audioSource.PlayOneShot(styutugekiSE);
         StartCoroutine(LoadScene());
     }
 

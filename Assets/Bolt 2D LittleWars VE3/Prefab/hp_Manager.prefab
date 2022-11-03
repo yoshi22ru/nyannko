@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5072901157764826839}
   - component: {fileID: 5072901157764826836}
-  - component: {fileID: 5072901157764826838}
+  - component: {fileID: 5587036043438439621}
   - component: {fileID: 5072901157764826833}
   m_Layer: 0
   m_Name: hp_Manager
@@ -55,7 +55,7 @@ MonoBehaviour:
   ishit: 0
   isDead: 0
   isLose: 0
---- !u!114 &5072901157764826838
+--- !u!114 &5587036043438439621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5072901157764826837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 989f1f6e77cc72547ba01855ed7a9a09, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b5261a91ce19f043bce14088ecd875b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   "\u6575\u306Ehp_object": {fileID: 0}
@@ -72,7 +72,7 @@ MonoBehaviour:
   "\u6575\u306Ehp": 1000
   "\u5473\u65B9\u306Ehp": 0
   hitSE: {fileID: 8300000, guid: f0a8dd700235eee449adfe79835c9f50, type: 3}
-  winSE: {fileID: 8300000, guid: ec66f3f6918eea546bdaf36c3cc7b4e3, type: 3}
+  winSE: {fileID: 0}
   ishit: 0
   isDead: 0
   isWin: 0
