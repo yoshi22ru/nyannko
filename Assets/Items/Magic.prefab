@@ -105,7 +105,7 @@ MonoBehaviour:
   attackRange: 3
   attackAnimationLength: 2
   damageTime: 2
-  bullet: {fileID: 3584544432638545485, guid: 7d94e9f0bc8b0944e8966af59c64f4f4, type: 3}
+  bullet: {fileID: 5257622526144443540, guid: 7249926476af5bb4eb64544ed8a8f648, type: 3}
   enemyForMe:
     serializedVersion: 2
     m_Bits: 64
