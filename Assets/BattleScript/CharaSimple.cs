@@ -66,6 +66,15 @@ public class CharaSimple : MonoBehaviour
                 }
             }
         }
+        if (other.CompareTag("Frag"))
+        {
+            E_bullet = other.GetComponent<Bullet>();
+            if (E_bullet.isFriend != isFriend) {
+                isFriend = E_bullet.isFriend;
+                if (isFriend) {
+                }
+            }
+        }
     }
 
     private void checkRange()
