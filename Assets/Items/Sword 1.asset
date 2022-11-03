@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Sword
   itemImage: {fileID: 4545135470104253956, guid: 3765a367fb48f9040bca18add088d6d3, type: 3}
   Chara: {fileID: 4646070196878831483, guid: ac81d0617887fc04bbe0fbd82300b94f, type: 3}
-  Cost: 1
+  Cost: 10
   earnedExperience: 0

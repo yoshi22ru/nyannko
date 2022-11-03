@@ -7,12 +7,16 @@ using UnityEngine.SceneManagement;
 public class ButtonToMainMenue : MonoBehaviour
 {
     [SerializeField] private Button button;
+    [SerializeField] private AudioClip back;
+    AudioSource audioSource;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         button.onClick.AddListener(backToMainMenu);
     }
     void backToMainMenu()
     {
+        audioSource.PlayOneShot(back);
         SceneManager.LoadScene("menu");
     }
 }
