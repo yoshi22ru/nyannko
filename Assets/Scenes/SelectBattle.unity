@@ -3155,7 +3155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   select: {fileID: 1556305153}
   button: {fileID: 1839320433}
-  LoadPanel: {fileID: 0}
+  LoadPanel: {fileID: 1767128136}
   styutugekiSE: {fileID: 0}
   StageNum: 2
 --- !u!114 &1839320433
@@ -3421,7 +3421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   select: {fileID: 1556305153}
   button: {fileID: 1855967198}
-  LoadPanel: {fileID: 0}
+  LoadPanel: {fileID: 1767128136}
   styutugekiSE: {fileID: 0}
   StageNum: 3
 --- !u!114 &1855967198
@@ -3848,8 +3848,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 964974444}
   m_HandleRect: {fileID: 964974443}
   m_Direction: 0
-  m_Value: 0.0032883708
-  m_Size: 0.78154016
+  m_Value: 0.0032883694
+  m_Size: 0.7815401
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
