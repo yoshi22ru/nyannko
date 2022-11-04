@@ -94,7 +94,7 @@ public class CharaSimple : MonoBehaviour
             transform.Translate(transform.right * speed / 10f);
         }
         else { // Enemy
-            this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 180.0f, 0.0f));
+            this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f));
             transform.Translate(-transform.right * speed / 10f);
         }
     }

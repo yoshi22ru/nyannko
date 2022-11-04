@@ -26,7 +26,7 @@ public class EnemyPop : MonoBehaviour
         for (int i = 0; i < EnemyNum; i++) {
             if (time % Frequency[i] <= Time.fixedDeltaTime)
             {
-                Instantiate(Enemy[i], this.transform.position,Quaternion.identity);
+                Instantiate(Enemy[i], this.transform.position,Quaternion.Euler(0, 0, 0));
             }
         }
     }
