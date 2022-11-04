@@ -1018,7 +1018,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyNum: 0
   Enemy:
-  - {fileID: 8165155841467314063, guid: 77b2608c9f60df847b2e3c8e22d42b4c, type: 3}
+  - {fileID: 1708718094270007627, guid: 9c86a22c4d9735e44a1992e511c4c65e, type: 3}
+  - {fileID: 2228962802660647668, guid: b28749117e02cf5439ae95a2097ba197, type: 3}
+  - {fileID: 3039973848406923734, guid: 2790a8c1cc09eb44f8835d11069d0fc1, type: 3}
   Frequency:
   - 1
 --- !u!1001 &1261473682

@@ -98,15 +98,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 0
-  HP: 10
-  power: 1
-  speed: 1
-  attackRange: 0
-  attackAnimationLength: 0
-  damageTime: 0
-  attackse: {fileID: 0}
-  bullet: {fileID: 0}
+  HP: 200
+  power: 15
+  speed: 0.3
+  attackRange: 0.3
+  vertical_challenge: 0.3
+  attackAnimationLength: 3
+  damageTime: 3
+  attackse: {fileID: 8300000, guid: 7af6a908e0f0be34facc7ecf15e2d676, type: 3}
+  bullet: {fileID: 5257622526144443540, guid: 7249926476af5bb4eb64544ed8a8f648, type: 3}
   enemyForMe:
     serializedVersion: 2
-    m_Bits: 0
-  text: {fileID: 0}
+    m_Bits: 128

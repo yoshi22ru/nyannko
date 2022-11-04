@@ -2813,6 +2813,7 @@ MonoBehaviour:
   EnemyNum: 0
   Enemy:
   - {fileID: 339763906769957318, guid: a91e7385aa79b634487277997f0130db, type: 3}
+  - {fileID: 365900576299423941, guid: 45fd472520e48f540b3a1b9f8890849c, type: 3}
   Frequency:
   - 2
 --- !u!1 &2114782353
