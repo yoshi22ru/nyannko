@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3904093213244045515}
   - component: {fileID: 4754772904581939958}
+  - component: {fileID: 2645148133593387413}
   m_Layer: 0
   m_Name: Witch
   m_TagString: Untagged
@@ -84,3 +85,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2645148133593387413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8543837819195842746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88662759787f924f9c0ea8310039c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFriend: 0
+  HP: 10
+  power: 1
+  speed: 1
+  attackRange: 0
+  attackAnimationLength: 0
+  damageTime: 0
+  attackse: {fileID: 0}
+  bullet: {fileID: 0}
+  enemyForMe:
+    serializedVersion: 2
+    m_Bits: 0
+  text: {fileID: 0}

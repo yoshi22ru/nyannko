@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1997190914487484594}
   - component: {fileID: 4436040772998191167}
+  - component: {fileID: 1770741001753790608}
   m_Layer: 0
   m_Name: Priest
   m_TagString: Untagged
@@ -84,3 +85,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1770741001753790608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708718094270007627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88662759787f924f9c0ea8310039c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFriend: 0
+  HP: 10
+  power: 1
+  speed: 1
+  attackRange: 0
+  attackAnimationLength: 0
+  damageTime: 0
+  attackse: {fileID: 0}
+  bullet: {fileID: 0}
+  enemyForMe:
+    serializedVersion: 2
+    m_Bits: 0
+  text: {fileID: 0}

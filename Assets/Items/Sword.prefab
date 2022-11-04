@@ -104,6 +104,7 @@ MonoBehaviour:
   power: 30
   speed: 0.5
   attackRange: 1
+  vertical_challenge: 0.3
   attackAnimationLength: 2
   damageTime: 0.7
   attackse: {fileID: 8300000, guid: ef03aae65bc0b684c8759d17c85cd1d7, type: 3}
@@ -111,7 +112,6 @@ MonoBehaviour:
   enemyForMe:
     serializedVersion: 2
     m_Bits: 64
-  text: {fileID: 7091749067800711341, guid: a9f53ca4dd756614e8e91a587cf236fc, type: 3}
 --- !u!61 &2696718204988495818
 BoxCollider2D:
   m_ObjectHideFlags: 0
