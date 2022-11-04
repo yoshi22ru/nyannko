@@ -2092,6 +2092,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyNum: 0
   Enemy:
-  - {fileID: 8165155841467314063, guid: 77b2608c9f60df847b2e3c8e22d42b4c, type: 3}
+  - {fileID: 339763906769957318, guid: a91e7385aa79b634487277997f0130db, type: 3}
   Frequency:
   - 2
