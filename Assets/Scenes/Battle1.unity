@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7016033346216776745, guid: 08e41eac366196e4cadaba75908657cd, type: 3}
       propertyPath: m_Name
-      value: plater1cooltimebar (2)
+      value: plater3cooltimebar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08e41eac366196e4cadaba75908657cd, type: 3}
@@ -277,11 +277,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618243980377236407, guid: 08e41eac366196e4cadaba75908657cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -401.61
+      value: -392.63
       objectReference: {fileID: 0}
     - target: {fileID: 6618243980377236407, guid: 08e41eac366196e4cadaba75908657cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -229.32
+      value: -229.3
       objectReference: {fileID: 0}
     - target: {fileID: 6618243980377236407, guid: 08e41eac366196e4cadaba75908657cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -317,7 +317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7016033346216776745, guid: 08e41eac366196e4cadaba75908657cd, type: 3}
       propertyPath: m_Name
-      value: plater1cooltimebar (3)
+      value: plater4cooltimebar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08e41eac366196e4cadaba75908657cd, type: 3}
@@ -2167,11 +2167,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618243980377236407, guid: 08e41eac366196e4cadaba75908657cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -392.59
+      value: -401.62
       objectReference: {fileID: 0}
     - target: {fileID: 6618243980377236407, guid: 08e41eac366196e4cadaba75908657cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -229.3
+      value: -229.32
       objectReference: {fileID: 0}
     - target: {fileID: 6618243980377236407, guid: 08e41eac366196e4cadaba75908657cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2207,7 +2207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7016033346216776745, guid: 08e41eac366196e4cadaba75908657cd, type: 3}
       propertyPath: m_Name
-      value: plater1cooltimebar (1)
+      value: plater2cooltimebar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08e41eac366196e4cadaba75908657cd, type: 3}
