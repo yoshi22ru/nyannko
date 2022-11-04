@@ -13,6 +13,7 @@ public class CharaSimple : MonoBehaviour
     public int power = 1;
     [SerializeField] private float speed = 1.0f;
     public float attackRange;
+    [SerializeField] private float vertical_challenge = 0.0f;
     [Header("animation")]
     private Animator anim;
     [SerializeField] private float attackAnimationLength;
@@ -33,8 +34,6 @@ public class CharaSimple : MonoBehaviour
 
     // damage
     Bullet E_bullet;
-    public GameObject text;
-    DamageText dam_text;
 
     GameObject attacker;
 
@@ -68,8 +67,6 @@ public class CharaSimple : MonoBehaviour
             if (E_bullet.isFriend != isFriend) {
                 HP -= E_bullet.power;
                 Debug.Log("ダメージ" + E_bullet.power);
-                //dam_text = Instantiate(text, this.transform.position, Quaternion.Euler(0f, 0f, 0f)).GetComponent<DamageText>();
-                //dam_text.damage = E_bullet.power;
                 if (HP <= 0) {
                     Destroy(this.gameObject);
                 }
@@ -99,12 +96,10 @@ public class CharaSimple : MonoBehaviour
     private void walk()
     {
         if (isFriend) { // Friend
-            this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f));
-            transform.Translate(transform.right * speed / 10f);
+            transform.Translate(transform.right * speed / 100f);
         }
         else { // Enemy
-            this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f));
-            transform.Translate(-transform.right * speed / 10f);
+            transform.Translate(-transform.right * speed / 100f);
         }
     }
 
@@ -129,9 +124,9 @@ public class CharaSimple : MonoBehaviour
     {
         if (damageTime <= animetime && damageTime + Time.fixedDeltaTime > animetime) {
             if (isFriend)
-                attacker = Instantiate(bullet, this.transform.position + new Vector3( attackRange / 2f,0,0), Quaternion.Euler(0.0f, 0.0f, 0.0f), this.transform);
+                attacker = Instantiate(bullet, this.transform.position + new Vector3( attackRange / 2f, vertical_challenge,0), Quaternion.Euler(0.0f, 0.0f, 0.0f), this.transform);
             else
-                attacker = Instantiate(bullet, this.transform.position - new Vector3( attackRange / 2f,0,0), Quaternion.Euler(0.0f, 0.0f, 0.0f), this.transform);
+                attacker = Instantiate(bullet, this.transform.position - new Vector3( attackRange / 2f, vertical_challenge,0), Quaternion.Euler(0.0f, 0.0f, 0.0f), this.transform);
             
             isAttacking = false;
             animetime = 0f;
