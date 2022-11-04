@@ -9,6 +9,7 @@ public class CharaPop : MonoBehaviour
     [SerializeField] private int MyNumber;
     [SerializeField] private Image SlotSprite;
     [SerializeField] private Text Cost_text;
+    [SerializeField] private Slider slider;
     [SerializeField] private Transform PopPos;
     public const float interval = 3f;
     private float interval_count;
@@ -36,6 +37,13 @@ public class CharaPop : MonoBehaviour
     {
         if (interval > interval_count) {
             interval_count += Time.fixedDeltaTime;
+            if (interval > interval_count) {
+                slider.value = interval_count / interval;
+            }
+            else
+                slider.value = 1;
         }
+        else
+            slider.value = 1;
     }
 }
