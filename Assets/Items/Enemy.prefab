@@ -99,9 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 0
-  HP: 10
-  power: 5
-  speed: 0.5
+  HP: 50
+  power: 15
+  speed: 0.4
   attackRange: 1
   attackAnimationLength: 2
   damageTime: 1

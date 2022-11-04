@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharaSimple : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class CharaSimple : MonoBehaviour
     [Header("which from starting animation to taking attack")]
     [SerializeField] private float damageTime;
     private float animetime;
+    [SerializeField] private AudioClip attackse;
+    AudioSource audioSource;
 
     // variable to attack
     [SerializeField] private GameObject bullet;
@@ -33,6 +37,11 @@ public class CharaSimple : MonoBehaviour
     DamageText dam_text;
 
     GameObject attacker;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void FixedUpdate()
     {
@@ -101,6 +110,8 @@ public class CharaSimple : MonoBehaviour
 
     private void attack()
     {
+        audioSource.PlayOneShot(attackse);
+
         //anim.SetBool("isAttack", true);
         isAttacking = true;
     }

@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Archer
   itemImage: {fileID: -4535586968756965052, guid: 3765a367fb48f9040bca18add088d6d3, type: 3}
   Chara: {fileID: 4646070196878831483, guid: 6d728c22ad084e542a7bb9940db88a4f, type: 3}
-  Cost: 10
+  Cost: 15
   earnedExperience: 0
