@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6686544003280524510}
   - component: {fileID: 1909096313199857040}
   - component: {fileID: 7027700784600476523}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Anubis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,13 +99,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFriend: 0
   HP: 10
-  power: 1
+  power: 2
   speed: 1
-  attackRange: 0
-  attackAnimationLength: 0
-  damageTime: 0
+  attackRange: 2
+  attackAnimationLength: 3
+  damageTime: 2
   bullet: {fileID: 0}
   enemyForMe:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   text: {fileID: 0}

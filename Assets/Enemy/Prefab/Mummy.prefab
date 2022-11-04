@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7781715649292350438}
   - component: {fileID: 4694807731429756944}
   - component: {fileID: 7668948667530423942}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,13 +99,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFriend: 0
   HP: 10
-  power: 1
+  power: 3
   speed: 1
-  attackRange: 0
-  attackAnimationLength: 0
-  damageTime: 0
+  attackRange: 2
+  attackAnimationLength: 5
+  damageTime: 2
   bullet: {fileID: 0}
   enemyForMe:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   text: {fileID: 0}
