@@ -3988,6 +3988,7 @@ MonoBehaviour:
   - {fileID: 8165155841467314063, guid: 77b2608c9f60df847b2e3c8e22d42b4c, type: 3}
   Frequency:
   - 3
+  catsle: {fileID: 1212188193}
 --- !u!1001 &7617469707124980592
 PrefabInstance:
   m_ObjectHideFlags: 0
