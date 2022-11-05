@@ -96,10 +96,10 @@ public class CharaSimple : MonoBehaviour
     private void walk()
     {
         if (isFriend) { // Friend
-            transform.Translate(transform.right * speed / 100f);
+            transform.Translate(transform.right * speed / 10f);
         }
         else { // Enemy
-            transform.Translate(-transform.right * speed / 100f);
+            transform.Translate(-transform.right * speed / 10f);
         }
     }
 
