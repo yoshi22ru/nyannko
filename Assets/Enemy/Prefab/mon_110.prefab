@@ -105,7 +105,7 @@ MonoBehaviour:
   speed: 0.3
   attackRange: 0.4
   vertical_challenge: 0.3
-  attackAnimationLength: 0
+  attackAnimationLength: 5
   damageTime: 5
   attackse: {fileID: 8300000, guid: 2e3c055e0e750e141adffeac39d5cd1f, type: 3}
   bullet: {fileID: 6114415143523224248, guid: 0a9395d128d567b42b14df7d7b46a801, type: 3}
