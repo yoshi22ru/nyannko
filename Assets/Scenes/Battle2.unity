@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 2635267128387486354, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: PopPos
       value: 
-      objectReference: {fileID: 1487452561}
+      objectReference: {fileID: 2019051318}
     - target: {fileID: 2635267128387486354, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: slider
       value: 
@@ -141,7 +141,7 @@ PrefabInstance:
     - target: {fileID: 2989093327701796641, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: PopPos
       value: 
-      objectReference: {fileID: 1487452561}
+      objectReference: {fileID: 2019051318}
     - target: {fileID: 2989093327701796641, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: slider
       value: 
@@ -149,7 +149,7 @@ PrefabInstance:
     - target: {fileID: 2989093327834126404, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: PopPos
       value: 
-      objectReference: {fileID: 1487452561}
+      objectReference: {fileID: 2019051318}
     - target: {fileID: 2989093327834126404, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: slider
       value: 
@@ -157,7 +157,7 @@ PrefabInstance:
     - target: {fileID: 2989093327859535312, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: PopPos
       value: 
-      objectReference: {fileID: 1487452561}
+      objectReference: {fileID: 2019051318}
     - target: {fileID: 2989093327859535312, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: slider
       value: 
@@ -2131,11 +2131,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4af163467ae55f41866ec7dec419147, type: 3}
---- !u!4 &1487452561 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1364022623219259604, guid: a4af163467ae55f41866ec7dec419147, type: 3}
-  m_PrefabInstance: {fileID: 1487452560}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1487966944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2877,6 +2872,37 @@ MonoBehaviour:
   Frequency:
   - 2
   - 2
+--- !u!1 &2019051317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2019051318}
+  m_Layer: 0
+  m_Name: playerspone
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2019051318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019051317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.2, y: -1.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2114782353
 GameObject:
   m_ObjectHideFlags: 0
