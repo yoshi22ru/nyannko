@@ -100,13 +100,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 0
-  HP: 150
-  power: 40
+  HP: 100
+  power: 30
   speed: 0.3
-  attackRange: 0.4
+  attackRange: 0.8
   vertical_challenge: 0.3
-  attackAnimationLength: 5
-  damageTime: 5
+  attackAnimationLength: 1
+  damageTime: 1.5
   attackse: {fileID: 8300000, guid: 2e3c055e0e750e141adffeac39d5cd1f, type: 3}
   bullet: {fileID: 6114415143523224248, guid: 0a9395d128d567b42b14df7d7b46a801, type: 3}
   enemyForMe:

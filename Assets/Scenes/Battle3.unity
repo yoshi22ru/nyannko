@@ -1055,9 +1055,9 @@ MonoBehaviour:
   - {fileID: 2228962802660647668, guid: b28749117e02cf5439ae95a2097ba197, type: 3}
   - {fileID: 3039973848406923734, guid: 2790a8c1cc09eb44f8835d11069d0fc1, type: 3}
   Frequency:
-  - 1
-  - 10
+  - 4
   - 5
+  - 6
 --- !u!1001 &1261473682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1123,11 +1123,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4af163467ae55f41866ec7dec419147, type: 3}
---- !u!4 &1261473683 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1364022623219259604, guid: a4af163467ae55f41866ec7dec419147, type: 3}
-  m_PrefabInstance: {fileID: 1261473682}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1330210879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,7 +2196,7 @@ PrefabInstance:
     - target: {fileID: 2635267128387486354, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: PopPos
       value: 
-      objectReference: {fileID: 1261473683}
+      objectReference: {fileID: 1693443278}
     - target: {fileID: 2635267128387486354, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: slider
       value: 
@@ -2209,7 +2204,7 @@ PrefabInstance:
     - target: {fileID: 2989093327701796641, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: PopPos
       value: 
-      objectReference: {fileID: 1261473683}
+      objectReference: {fileID: 1693443278}
     - target: {fileID: 2989093327701796641, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: slider
       value: 
@@ -2217,7 +2212,7 @@ PrefabInstance:
     - target: {fileID: 2989093327834126404, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: PopPos
       value: 
-      objectReference: {fileID: 1261473683}
+      objectReference: {fileID: 1693443278}
     - target: {fileID: 2989093327834126404, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: slider
       value: 
@@ -2225,7 +2220,7 @@ PrefabInstance:
     - target: {fileID: 2989093327859535312, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: PopPos
       value: 
-      objectReference: {fileID: 1261473683}
+      objectReference: {fileID: 1693443278}
     - target: {fileID: 2989093327859535312, guid: 56ac25f63d2692d4095ebf7a064ae2de, type: 3}
       propertyPath: slider
       value: 

@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 0
-  HP: 60
+  HP: 70
   power: 15
   speed: 0.5
   attackRange: 2
