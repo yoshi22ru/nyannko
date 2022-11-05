@@ -1055,9 +1055,9 @@ MonoBehaviour:
   - {fileID: 2228962802660647668, guid: b28749117e02cf5439ae95a2097ba197, type: 3}
   - {fileID: 3039973848406923734, guid: 2790a8c1cc09eb44f8835d11069d0fc1, type: 3}
   Frequency:
-  - 4
   - 5
-  - 6
+  - 8
+  - 7
 --- !u!1001 &1261473682
 PrefabInstance:
   m_ObjectHideFlags: 0
