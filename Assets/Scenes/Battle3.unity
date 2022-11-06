@@ -1059,6 +1059,10 @@ MonoBehaviour:
   - 8
   - 7
   catsle: {fileID: 1693443278}
+  dont_use_case_one: 0
+  argment_one: 1
+  dont_use_case_two: 0
+  argment_two: 1
 --- !u!1001 &1261473682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2186,7 +2190,7 @@ MonoBehaviour:
   notactivecanvas: {fileID: 1786543799}
   money: 0
   moneySpeed:
-  - 5
+  - 7
 --- !u!1001 &1786543795
 PrefabInstance:
   m_ObjectHideFlags: 0

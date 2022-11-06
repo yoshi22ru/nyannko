@@ -28,7 +28,8 @@ public class RaidButton : MonoBehaviour
     {
         if (myNumber != -1) {
             raidMenu.RaidInTo(myNumber);
-            CharaDataPrint.dataPrint.PrintData(raidMenu.charaDataBase.charadata[myNumber]);
+            if (InfomationCounter.info.Raid.Count < InfomationCounter.info.partyMAX)
+                CharaDataPrint.dataPrint.PrintData(raidMenu.charaDataBase.charadata[myNumber]);
         }
     }
 }

@@ -103,7 +103,7 @@ MonoBehaviour:
   HP: 50
   power: 20
   speed: 0.4
-  attackRange: 3
+  attackRange: 4
   vertical_challenge: 0.3
   attackAnimationLength: 2.1
   damageTime: 1

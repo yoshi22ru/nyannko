@@ -1998,7 +1998,7 @@ MonoBehaviour:
   notactivecanvas: {fileID: 823085359}
   money: 0
   moneySpeed:
-  - 5
+  - 7
   - 10
   - 15
   - 20
@@ -3989,6 +3989,10 @@ MonoBehaviour:
   Frequency:
   - 3
   catsle: {fileID: 1212188193}
+  dont_use_case_one: 0
+  argment_one: 1
+  dont_use_case_two: 0
+  argment_two: 1
 --- !u!1001 &7617469707124980592
 PrefabInstance:
   m_ObjectHideFlags: 0

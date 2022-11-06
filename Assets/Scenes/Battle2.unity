@@ -2774,7 +2774,7 @@ MonoBehaviour:
   notactivecanvas: {fileID: 394460412}
   money: 0
   moneySpeed:
-  - 5
+  - 7
 --- !u!1001 &1933338565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2873,6 +2873,10 @@ MonoBehaviour:
   - 3
   - 3
   catsle: {fileID: 2019051318}
+  dont_use_case_one: 0
+  argment_one: 1
+  dont_use_case_two: 0
+  argment_two: 1
 --- !u!1 &2019051317
 GameObject:
   m_ObjectHideFlags: 0

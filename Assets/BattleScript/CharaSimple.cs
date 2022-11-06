@@ -11,7 +11,7 @@ public class CharaSimple : MonoBehaviour
     [Header("Propaty")]
     public int HP = 10;
     public int power = 1;
-    [SerializeField] private float speed = 1.0f;
+    public float speed = 1.0f;
     public float attackRange;
     [SerializeField] private float vertical_challenge = 0.0f;
     [Header("animation")]
